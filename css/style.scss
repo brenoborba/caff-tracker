@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,37 +9,44 @@
 body{
     font-family: 'Poppins', sans-serif;
     text-align: center;
-}
+} */
 
 
-.container{
-    margin-top: 100px;
+.cupContainer{
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
-    h1{
-        font-weight: 700;
-        margin-bottom: 50px;
-        margin-left: -80px;
-        letter-spacing: 2px;
+    .cupHolder{
+        height: 60px;
+        width: 120px;
+        transform: rotate(90deg);
+        border-radius: 25px 25px 0 0;
+        border: 15px solid #999999;
+        position: absolute;
+        margin-right: -300px;
     }
 
-    .cup{
-        
-
-        .coffemug{
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
-            width: 300px;
-            height: 300px;
-
-        }
-
-        .liquid{
-            margin: auto;
-            background-color: #873e23;
-            width: 90px;
-            height: 95px;
-        }
+    .cupBody{
+        height: 300px;
+        width: 240px;
+        background-color: #999999;
+        border-radius: 8px;
     }
 
+    .coffee {
+        width: 210px;
+        background-color: #8A624A;
+        height: 210px;
+        position: absolute;
+        bottom: 9px;
+        border-radius: 3px;
+      }
 }
