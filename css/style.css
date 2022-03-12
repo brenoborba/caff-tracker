@@ -1,10 +1,21 @@
+@font-face {
+  font-family: black-burger;
+  src: url("/assets/black-burger.rough.ttf");
+}
+
+@font-face {
+  font-family: black-burger;
+  font-weight: bold;
+  src: url("/assets/black-burger.rough.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'black-burger', sans-serif;
   background-color: #79553e;
 }
 
@@ -80,7 +91,38 @@ body {
           justify-content: space-between;
 }
 
-.btn-container .btn {
+.btn-container .btn-test {
+  font-family: 'black-burger', sans-serif;
+  font-size: 25px;
+  background-color: #79553e;
+  color: white;
   width: 200px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid #C79F6D;
+  border-radius: 12px;
+}
+
+.btn-container .btn-test span {
+  margin-left: 12px;
+}
+
+.btn-container .btn-test .mug-img {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-container .btn-test:hover {
+  background-color: #C79F6D;
+  border: 3px solid #9d7d56;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
