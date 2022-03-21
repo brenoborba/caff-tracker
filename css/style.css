@@ -59,7 +59,7 @@ body {
 }
 
 .cupContainer .cupBody {
-  height: 300px;
+  height: 280px;
   width: 240px;
   background-color: #fffffff3;
   border-radius: 15px;
@@ -68,7 +68,7 @@ body {
 .cupContainer .coffee {
   width: 210px;
   background-color: #79553e;
-  height: 210px;
+  height: 0;
   position: absolute;
   bottom: 9px;
   border-radius: 6px;
@@ -91,7 +91,7 @@ body {
           justify-content: space-between;
 }
 
-.btn-container .btn-test {
+.btn-container .btn {
   font-family: 'black-burger', sans-serif;
   font-size: 25px;
   background-color: #79553e;
@@ -109,18 +109,20 @@ body {
           align-items: center;
   border: 3px solid #C79F6D;
   border-radius: 12px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.btn-container .btn-test span {
+.btn-container .btn span {
   margin-left: 12px;
 }
 
-.btn-container .btn-test .mug-img {
+.btn-container .btn .mug-img {
   width: 30px;
   height: 30px;
 }
 
-.btn-container .btn-test:hover {
+.btn-container .btn:hover {
   background-color: #C79F6D;
   border: 3px solid #9d7d56;
   cursor: pointer;
