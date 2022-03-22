@@ -2,6 +2,7 @@ const coffee = document.querySelector('.coffee')
 const oneMug = document.getElementById('one-mug')
 const twoMug = document.getElementById('two-mug')
 const threeMug = document.getElementById('three-mug')
+const clearBtn = document.getElementById('clear')
 const caffLimit = 280
 let caff1 = 56
 let caff2 = 28
@@ -9,7 +10,13 @@ let caff3 =  18.6
 let displayUpdater
 
 
-function changeHeight(qtd){
+function clearHeight(btn){
+  btn.onclick = function(){
+    coffee.style.setProperty('height', 0)
+  }
+}
+
+function increaseHeight(qtd){
   let newHeight
   let height = getComputedStyle(coffee).getPropertyValue('height')
   let convertedHeight = parseInt(height)
@@ -21,26 +28,14 @@ function changeHeight(qtd){
 
 function btnFunc(btn, caff){
   btn.onclick = function(){
-    changeHeight(caff)
+    increaseHeight(caff)
   }
 }
-
-/* if(displayUpdater <= caffLimit){
-  oneMug.onclick = function(){
-    changeHeight(caff1)
-  }
-  
-  twoMug.onclick = function(){
-    changeHeight(caff2)
-  }
-  
-  threeMug.onclick = function(){
-    changeHeight(caff3)
-  }
-} */
-
-
 
 btnFunc(oneMug, caff1)
 btnFunc(twoMug, caff2)
 btnFunc(threeMug, caff3)
+
+clearHeight(clearBtn)
+
+
