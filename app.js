@@ -10,12 +10,19 @@ let caff2 = 28
 let caff3 =  18.6
 let heightMonitor
 
-message.style.display = 'none'
 
+message.classList.add('hide')
+
+function warningMessage(){
+  if (heightMonitor >= caffLimit){
+    message.classList.remove('hide')
+  }
+}
 
 function clearHeight(btn){
   btn.onclick = function(){
     coffee.style.setProperty('height', 0)
+    message.classList.add('hide')
   }
 }
 
@@ -26,7 +33,8 @@ function increaseHeight(qtd){
   newHeight = convertedHeight + qtd
   coffee.style.setProperty('height', newHeight + "px")
   heightMonitor = newHeight
-  showWarningMessage()
+  warningMessage()
+
 }
 
 
@@ -36,18 +44,12 @@ function btnFunc(btn, caff){
   }
 }
 
-function showWarningMessage(){
-  if (heightMonitor >= caffLimit){
-    message.style.display = 'block'
-  }
-}
 
 function main(){
   btnFunc(oneMug, caff1)
   btnFunc(twoMug, caff2)
   btnFunc(threeMug, caff3)
   clearHeight(clearBtn)
-
   
 }
 
