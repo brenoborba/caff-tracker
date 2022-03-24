@@ -12,17 +12,20 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: 'black-burger', sans-serif;
   background-color: #79553e;
+  height: 100vh;
 }
 
 .logo {
-  margin-top: 50px;
+  margin-top: 40px;
   display: block;
-  width: 600px;
+  width: 550px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -127,5 +130,24 @@ body {
   background-color: #C79F6D;
   border: 3px solid #9d7d56;
   cursor: pointer;
+}
+
+.mainContainer {
+  margin-top: -50px;
+}
+
+.message {
+  font-family: 'black-burger', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: #79553e;
+  color: white;
+  margin: 15px 12vw 0 12vw;
+  border: 3px solid #C79F6D;
+  border-radius: 12px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 8px;
 }
 /*# sourceMappingURL=style.css.map */
